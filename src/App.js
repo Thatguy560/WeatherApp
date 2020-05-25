@@ -31,10 +31,12 @@ function App() {
 
      return `${day} ${date} ${month} ${year}`
     }
-
-  return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 10 ) ? 'app warm' 
-    : 'app cold') : 'app'}>
+    // {console.log(weather.weather[0].main)}
+    // Incorporate more images for type of weather e.g. rain
+    // also incorporate more of the weather attributes?
+    return (
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 10 ) ? 'app warm' : 'app cold') : 'app'}>
+    {/* // Condition ? return this : condition ? Return this */}
       <main>
         <div className="search-box">
           <input 
@@ -55,8 +57,10 @@ function App() {
         <div className="weather-box">
           <div className="temp">
             {Math.round(weather.main.temp)}°c
+            {console.log(weather.weather[0].main)}
           </div>
           <div className="weather">{weather.weather[0].main}</div>
+          <div className="feelslike">Feels like {Math.round(weather.main.feels_like)}°c</div>
         </div>
        </div>
        ) : ('')}
@@ -64,5 +68,5 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;
