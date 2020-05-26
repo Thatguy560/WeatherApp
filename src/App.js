@@ -64,6 +64,7 @@ function App() {
           </div>
           <div className="weather">{weather.weather[0].main}</div>
           <div className="feelslike">Feels like {Math.round(weather.main.feels_like)}°c</div>
+          <div className="windspeed">Wind Speed: {Math.round(weather.wind.speed)}mph</div>
         </div>
        </div>
        ) : ('')}
