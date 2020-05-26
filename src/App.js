@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+
 const api = {
-  key: "5f69e3c197e9a0d92d427ee6107b7ad8",
+  key: process.env.REACT_APP_API_KEY,
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -35,8 +36,10 @@ function App() {
     // Incorporate more images for type of weather e.g. rain
     // also incorporate more of the weather attributes?
     return (
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 10 ) ? 'app warm' : 'app cold') : 'app'}>
-    {/* // Condition ? return this : condition ? Return this */}
+      // <div className={weather.main.temp > 10 ? 'app warm' : 'app cold'}></div>
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 10) ? 'app warm' : 'app cold') : 'app'}>
+    {/* Condition ? return value : condition ? Return value : condition ? return value */}
+    {/* weather.weather[0].main */}
       <main>
         <div className="search-box">
           <input 
