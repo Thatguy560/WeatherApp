@@ -32,14 +32,14 @@ function App() {
 
      return `${day} ${date} ${month} ${year}`
     }
-    // {console.log(weather.weather[0].main)}
-    // Incorporate more images for type of weather e.g. rain
-    // also incorporate more of the weather attributes?
     return (
-      // <div className={weather.main.temp > 10 ? 'app warm' : 'app cold'}></div>
-    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 10) ? 'app warm' : 'app cold') : 'app'}>
-    {/* Condition ? return value : condition ? Return value : condition ? return value */}
-    {/* weather.weather[0].main */}
+      // (Condition) ? 'return value' :
+    <div className={(typeof weather.main != "undefined") ?
+     ((weather.main.temp > 15 && weather.main.temp < 30 && weather.weather[0].main === "Clouds") ? 'app warmcloudy' : (weather.main.temp > 15 && weather.main.temp < 30 && weather.weather[0].main === "Clear") ? 'app warm' 
+     : (weather.main.temp < 4) ? 'app ice' : (weather.weather[0].main === "Thunderstorm") ? 'app lightning' : 
+     (weather.weather[0].main === "Snow") ? 'app snow' : (weather.main.temp >= 30) ? 'app hot' : 
+     (weather.main.temp < 5 && weather.weather[0].main === "Clear") ? 'app coldclear' : 
+     (weather.weather[0].main === "Rain") ? 'app raining' : 'app clear') : 'app'}>
       <main>
         <div className="search-box">
           <input 
