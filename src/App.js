@@ -37,7 +37,7 @@ function App() {
     <div className={(typeof weather.main != "undefined") ?
      ((weather.main.temp > 15 && weather.main.temp < 30 && weather.weather[0].main === "Clouds") ? 'app warmcloudy' : (weather.main.temp > 15 && weather.main.temp < 30 && weather.weather[0].main === "Clear") ? 'app warm' 
      : (weather.main.temp < 4) ? 'app ice' : (weather.weather[0].main === "Thunderstorm") ? 'app lightning' : 
-     (weather.weather[0].main === "Snow") ? 'app snow' : (weather.main.temp >= 30) ? 'app hot' : 
+     (weather.weather[0].main === "Snow") ? 'app snow' : (weather.main.temp >= 30 && weather.weather[0].main !== "Rain") ? 'app hot' : 
      (weather.main.temp < 5 && weather.weather[0].main === "Clear") ? 'app coldclear' : 
      (weather.weather[0].main === "Rain") ? 'app raining' : 'app clear') : 'app'}>
       <main>
@@ -74,3 +74,4 @@ function App() {
 }
  
 export default App;
+
