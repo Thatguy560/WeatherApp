@@ -1,6 +1,6 @@
 # Weather App - React
 
-![AppImage](/Users/student/Projects/weather-react/src/assets/Screenshot.png)
+![AppImage](https://github.com/Thatguy560/WeatherApp/blob/master/src/assets/Screenshot.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
