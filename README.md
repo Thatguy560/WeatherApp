@@ -1,3 +1,7 @@
+# Weather App - React
+
+![AppImage](/Users/student/Projects/weather-react/src/assets/Screenshot.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
