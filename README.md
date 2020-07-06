@@ -2,7 +2,7 @@
 
 ![AppImage](https://github.com/Thatguy560/WeatherApp/blob/master/src/assets/Screenshot.png?raw=true)
 
-This is a simple weather application that utilises the OpenWeatherMap API. It allows a user to type in a location and see the current temperature and conditions of any country. I wanted to make a few projects with the objective of practising React.
+This is a simple weather application that utilises the OpenWeatherMap API. It allows a user to type in a location and see the current temperature and weather conditions of any country. I wanted to make a few projects with the objective of practising React.
 
 # Installation
 
