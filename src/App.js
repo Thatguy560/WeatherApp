@@ -37,7 +37,7 @@ function App() {
     ];
     let days = [
       "Sunday",
-      "Mondy",
+      "Monday",
       "Tuesday",
       "Wednesday",
       "Thursday",
